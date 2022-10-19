@@ -1,0 +1,72 @@
+Index: werken.xpath-0.9.4/src/com/werken/xpath/ElementNamespaceContext.java
+===================================================================
+--- werken.xpath-0.9.4.orig/src/com/werken/xpath/ElementNamespaceContext.java	2000-10-24 05:53:33.000000000 +0200
++++ werken.xpath-0.9.4/src/com/werken/xpath/ElementNamespaceContext.java	2011-08-29 17:10:58.000000000 +0200
+@@ -62,12 +62,12 @@
+ 
+       lineage.push(_element);
+ 
+-      Element elem = _element.getParent();
++      Element elem = (Element)_element.getParent();
+ 
+       while (elem != null)
+       {
+         lineage.push(elem);
+-        elem = elem.getParent();
++        elem = (Element)elem.getParent();
+       }
+ 
+       List      nsList = null;
+Index: werken.xpath-0.9.4/src/com/werken/xpath/impl/ParentStep.java
+===================================================================
+--- werken.xpath-0.9.4.orig/src/com/werken/xpath/impl/ParentStep.java	2000-10-25 04:19:16.000000000 +0200
++++ werken.xpath-0.9.4/src/com/werken/xpath/impl/ParentStep.java	2011-08-29 17:10:58.000000000 +0200
+@@ -50,7 +50,7 @@
+ 
+       if ( each instanceof Element )
+       {
+-        parent = ((Element)each).getParent();
++        parent = (Element)((Element)each).getParent();
+ 
+         if (parent != null)
+         {
+Index: werken.xpath-0.9.4/src/com/werken/xpath/util/Partition.java
+===================================================================
+--- werken.xpath-0.9.4.orig/src/com/werken/xpath/util/Partition.java	2000-10-31 16:22:01.000000000 +0100
++++ werken.xpath-0.9.4/src/com/werken/xpath/util/Partition.java	2011-08-29 17:10:58.000000000 +0200
+@@ -67,7 +67,7 @@
+ 
+   public static List followingSiblings(Element node)
+   {
+-    Element parent = node.getParent();
++    Element parent = (Element)node.getParent();
+ 
+     if (parent == null)
+     {
+@@ -95,7 +95,7 @@
+ 
+   public static List preceedingSiblings(Element node)
+   {
+-    Element parent = node.getParent();
++    Element parent = (Element)node.getParent();
+ 
+     if (parent == null)
+     {
+@@ -137,7 +137,7 @@
+       results.addAll( Partition.descendants( each ) );
+     }
+ 
+-    Element parent = node.getParent();
++    Element parent = (Element)node.getParent();
+ 
+     if (parent != null)
+     {
+@@ -170,7 +170,7 @@
+       results.addAll( Partition.descendants( each ) );
+     }
+ 
+-    Element parent = node.getParent();
++    Element parent = (Element)node.getParent();
+ 
+     if (parent != null)
+     {

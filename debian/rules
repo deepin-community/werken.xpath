@@ -1,0 +1,6 @@
+#!/usr/bin/make -f
+
+export CLASSPATH=/usr/share/java/jdom1.jar:/usr/share/java/antlrall.jar
+
+%:
+	dh $@ --with maven-repo-helper

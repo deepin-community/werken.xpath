@@ -1,0 +1,3 @@
+version=3
+opts=uversionmangle=s/-beta/~beta/ \
+http://sf.net/werken-xpath/werken.xpath-([[:digit:].]+(?:-beta)?)-full\.tar\.gz

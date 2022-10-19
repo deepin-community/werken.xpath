@@ -1,0 +1,13 @@
+Index: werken.xpath-0.9.4/src/com/werken/xpath/function/StringFunction.java
+===================================================================
+--- werken.xpath-0.9.4.orig/src/com/werken/xpath/function/StringFunction.java	2000-10-24 05:30:00.000000000 +0200
++++ werken.xpath-0.9.4/src/com/werken/xpath/function/StringFunction.java	2011-08-29 17:10:54.000000000 +0200
+@@ -71,7 +71,7 @@
+ 
+   public static String evaluate(Element elem)
+   {
+-    List content = elem.getMixedContent();
++    List content = elem.getContent();
+ 
+     Iterator contentIter = content.iterator();
+     Object each = null;

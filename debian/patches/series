@@ -1,0 +1,5 @@
+01_Test_CompileFix_JDomAPIChange.patch
+02_JDOM_NodeTypeStep.patch
+03_JDOM_UnAbbrStep.patch
+04_JDOM_StringFunction.patch
+05_JDOM_getParent.patch

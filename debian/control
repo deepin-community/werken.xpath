@@ -1,0 +1,30 @@
+Source: werken.xpath
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Damien Raude-Morvan <drazzib@debian.org>
+Build-Depends:
+ ant,
+ debhelper-compat (= 13),
+ default-jdk,
+ libantlr-java (>= 2.7),
+ libjdom1-java,
+ maven-repo-helper
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/java-team/werken.xpath.git
+Vcs-Browser: https://salsa.debian.org/java-team/werken.xpath
+Homepage: http://werken-xpath.sourceforge.net
+
+Package: libwerken.xpath-java
+Architecture: all
+Depends:
+ libantlr-java (>= 2.7),
+ libjdom1-java,
+ ${misc:Depends}
+Description: JDOM XPath Engine
+ A XPath Engine for JDOM, created by the Werken & Sons Company.
+ .
+ It's not overly useful by itself, but rather needs an (currently in
+ development) implementation of XPointer, XSLT, or other XPath-based
+ specification.  werken.xpath is merely an engine which can parse XPaths,
+ and walk JDOM <http://www.jdom.org/> trees.

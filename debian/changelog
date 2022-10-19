@@ -1,0 +1,160 @@
+werken.xpath (0.9.4-16) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Markus Koschany ]
+  * Moved the package to Git
+
+  [ Emmanuel Bourg ]
+  * Removed the dependency on libxerces2-java
+  * Removed the -java-doc package
+  * Build with the DH sequencer instead of CDBS
+  * Standards-Version updated to 4.5.1
+  * Switch to debhelper level 13
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 02 Feb 2021 15:44:34 +0100
+
+werken.xpath (0.9.4-15) unstable; urgency=medium
+
+  * Team upload.
+  * Fixed the link /usr/share/java/werken.xpath.jar (Closes: #749576)
+  * Set the compiler source/target level to 1.6
+  * debian/control:
+    - Standards-Version updated to 3.9.5 (no changes)
+    - Use a canonical URL for the Vcs-Svn field
+    - Fixed the Suggests field for libwerken.xpath-java-doc
+  * Switch to debhelper level 9
+  * debian/rules: Improved the clean target
+  * debian/copyright: Fixed the Format URI
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 28 May 2014 10:56:35 +0200
+
+werken.xpath (0.9.4-14) unstable; urgency=low
+
+  * Team upload.
+  * Depends on libantr-java (library) instead antlr.
+  * Bump Standards-Version to 3.9.2: no changes needed.
+  * Drop Michael Koch from Uploaders (Closes: #654139).
+  * Add myself as Uploaders.
+  * Reformat d/copyright to DEP-5.
+  * Split Javadoc into separate libwerken.xpath-java-doc package.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sat, 07 Jan 2012 23:57:43 +0100
+
+werken.xpath (0.9.4-13) unstable; urgency=low
+
+  * Team upload.
+  * Add Homepage and Vcs-Browser fields.
+  * Add pom.xml and use maven-repo-helper for installation.
+
+ -- Torsten Werner <twerner@debian.org>  Thu, 15 Sep 2011 10:44:56 +0200
+
+werken.xpath (0.9.4-12) unstable; urgency=low
+
+  * Team upload.
+  * Remove Arnaud from Uploaders list.
+  * Update Standards-Version: 3.9.1.
+  * Add Vcs-Svn header.
+  * Remove Java runtime from Depends.
+  * Switch to source format 3.0.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 29 Aug 2011 17:11:40 +0200
+
+werken.xpath (0.9.4-11) unstable; urgency=low
+
+  * (Build-)Depends on libjdom1-java (Closes: #500537).
+  * Added debian/patches/05_JDOM_getParent.patch.
+  * Loosen Depends to allow non-default java implementations too.
+
+ -- Michael Koch <konqueror@gmx.de>  Mon, 28 Sep 2009 21:52:03 +0200
+
+werken.xpath (0.9.4-10) unstable; urgency=low
+
+  * (Build-)Depends on default-jdk.
+  * Build-Depends on debhelper >= 7.
+  * Moved debhelper, cdbs and ant to Build-Depends.
+  * Moved package to section 'java'
+  * Fixed watch file to use SourceForge redirector.
+  * Removed Wolfgang and added myself to Uploaders.
+  * Updated Standards-Version to 3.8.3.
+
+ -- Michael Koch <konqueror@gmx.de>  Tue, 15 Sep 2009 07:29:33 +0200
+
+werken.xpath (0.9.4-9) unstable; urgency=low
+
+  * Removed Takashi Okamoto (closes: #352994)
+
+ -- Arnaud Vandyck <avdyk@debian.org>  Tue, 25 Apr 2006 15:18:39 +0200
+
+werken.xpath (0.9.4-8) unstable; urgency=low
+
+  * kaffe compiler transition 
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Mon, 16 Jan 2006 15:04:34 +0100
+
+werken.xpath (0.9.4-7) unstable; urgency=low
+
+  * Changed build dependencies
+    - libant1.6-java to ant
+    - libxerces-java to libxerces2-java
+  * Standards-Version 3.6.2 (no changes)
+  * Minor adjustment of description to fix linda warning
+
+  * Upload sponsored by Arnaud Vandyck
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Tue, 16 Aug 2005 21:24:10 +0200
+
+werken.xpath (0.9.4-6) unstable; urgency=low
+
+  * Move to main (Closes: #257839)
+  * upload with the sources.
+
+ -- Arnaud Vandyck <avdyk@debian.org>  Sun, 10 Apr 2005 23:26:27 +0200
+
+werken.xpath (0.9.4-5) unstable; urgency=low
+
+  * Changed build system to cdbs
+  * Move to main (Closes: #257839)
+  * Splitted patches from diff.gz into single patch files
+  * Standards-Version to 3.6.1 (no changes required)
+  * avdyk: added Wolfgang and myself to the uploaders
+  
+ -- Wolfgang Baer <WBaer@gmx.de>  Tue, 15 Mar 2005 20:06:29 +0100
+
+werken.xpath (0.9.4-4) unstable; urgency=low
+
+  * fixed FTBFS (Closes: #297555)
+  * adjusted jdom dependency to libjdom0-java
+  * changed maintainer to Debian Java Maintainers as
+    requested by Takashi Okamoto for comaintaining
+  * added java runtime dependency to depends  
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Mon, 14 Mar 2005 19:50:14 +0100
+
+werken.xpath (0.9.4-3) unstable; urgency=low
+
+  * fixed FTBFS(Closes: #148616)
+  * move to contrib section because jdom which werken.xpath depends 
+    library move to contrib.
+
+ -- Takashi Okamoto <tora@debian.org>  Fri, 31 May 2002 23:45:52 +0900
+
+werken.xpath (0.9.4-2) unstable; urgency=low
+
+  * fixed build fail bug (Closes: #134904)
+  * Modify following class for new jdom:
+  *	UnAbbrStep.java
+  *	NodeTypeStep.java
+  *	XPathTokenTypes.txt
+
+ -- Takashi Okamoto <tora@debian.org>  Thu, 21 Feb 2002 08:56:22 +0900
+
+werken.xpath (0.9.4-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Takashi Okamoto <tora@debian.org>  Sun, 29 Jul 2001 12:42:17 +0900
+
+Local variables:
+mode: debian-changelog
+End:
